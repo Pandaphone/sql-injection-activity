@@ -20,13 +20,13 @@ app.get('/', (req, res) => {
 })
 
 app.post('/login', (req, res) => {
-    let uName = req.body.username
-    let pWord = req.body.password
+    let username = req.body.username
+    let password = req.body.password
     let query = "SELECT title FROM user where username = '" + username + "' and password = '" + password + "'";
 
 
-    console.log("Your username:" + uName)
-    console.log("Your password" + pWord)
+    console.log("Your username:" + username)
+    console.log("Your password" + password)
     console.log("Your query:" + query)
 
     db.get(query, function (err, row) {
